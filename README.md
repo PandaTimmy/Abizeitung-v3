@@ -36,7 +36,7 @@ Diese Version ist noch nicht fertig und wird nicht mehr von mir fertig gestellt 
 
 ## Admin Anmeldedaten
 
-Benutzername: `TimothyKli` <br>
+Benutzername: `Admin-TK` <br>
 Passwort: `nTSqB6hwRyJp`
 
 <br>
