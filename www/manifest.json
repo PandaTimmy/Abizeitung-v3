@@ -1,0 +1,9 @@
+{
+  "name": "Abibuzz",
+  "short_name": "Abibuzz",
+  "description": "Abibuzz - Abizeitungsapp",
+  "start_url": "",
+  "display": "standalone",
+  "theme_color": "#201915",
+  "background_color": "#201915"
+}

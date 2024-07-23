@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>Abibuzz</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.3.min.js"></script>
+    <meta name="theme-color" content="#2E2E2E">
+    <script src="javascript/-admin-manage-facilities.js"></script>
+    <script src="javascript/appendHTML.js"></script>
+    <script src="javascript/appendAdminHTML.js"></script>
+    <script src="javascript/alerts.js"></script>
+    <script src="javascript/afterhTMLloadFunctions.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/adminLogin.js"></script>
+    <script src="javascript/navigate.js"></script>
+    <script src="javascript/search.js"></script>
+    <script src="javascript/cookies.js"></script>
+    <script src="javascript/confirm.js"></script>
+    <script src="javascript/login.js"></script>
+    <script src="javascript/group-add.js"></script>
+    <script src="javascript/group-load.js"></script>
+    <script src="javascript/home.js"></script>
+    <script src="javascript/zitate.js"></script>
+    <script src="javascript/ua_add.js"></script>
+    <script src="javascript/ausloggen.js"></script>
+    <script src="javascript/ua_load.js"></script>
+    <script src="javascript/loginlink.js"></script>
+
+    <link rel="preload" href="home.html" as="document">
+    <link rel="preload" href="quotes.html" as="document">
+
+
+    <script type="text/javascript">
+        document.addEventListener('touchmove', function (event) {
+          if (event.scale !== 1) { event.preventDefault(); }
+        }, { passive: false });
+        </script>
+
+    <script>
+        function theme(themenum) {
+            if (themenum == 1) {
+                changeThemeColor('#232323');
+            }
+            else if (themenum == 2) {
+                changeThemeColor('#494F49');
+            }
+            else if (themenum == 3) {
+                changeThemeColor('#703D7E');
+            }
+            else if (themenum == 4) {
+                changeThemeColor('#3F2917');
+            }
+            else if (themenum == 5) {
+                changeThemeColor('#3A5C71');
+            }
+            else if (themenum == 6) {
+                changeThemeColor('#8F577B');
+            }
+            else if (themenum == 7) {
+                changeThemeColor('#3F4F72');
+            }
+            else if (themenum == 8) {
+                changeThemeColor('#201915');
+            }
+            else {
+                changeThemeColor('#2E2E2E');
+            }
+        }
+
+        theme(8);
+
+        function changeThemeColor(color) {
+            let themeColorMeta = document.querySelector('meta[name="theme-color"]');
+            
+            // Falls das Meta-Tag nicht existiert, erstellen wir es
+            if (!themeColorMeta) {
+                themeColorMeta = document.createElement('meta');
+                themeColorMeta.setAttribute('name', 'theme-color');
+                document.head.appendChild(themeColorMeta);
+            }
+
+            themeColorMeta.setAttribute('content', color);
+        }
+
+    </script>
+
+
+    <style>
+        body {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="app">
+        <div class="topbar"></div>
+        <div id="bottombar" class="bottombar"></div>
+        <div id="bottombar2" class="bottombar2" style="z-index: -3;"></div>
+        <div id="bottomnav" class="bottomnav">
+            <div class="bigbuttons">
+                <div id="bigbutton-nav-1" onclick="bigbuttonNav1()" class="bigbuttonnav back"></div>
+                <div id="bigbutton-nav-2" onclick="bigbuttonNav2()" class="bigbuttonnav back"></div>
+                <div id="bigbutton-nav-3" onclick="bigbuttonNav3()" class="bigbuttonnav back"></div>
+            </div>
+            <div class="smallbuttons" id="smallbuttons">
+                <div class="button bubble"></div>
+                <div class="button profile"></div>
+                <div class="button menu"></div>
+            </div>
+        </div>
+        <div class="alert" id="alert">
+            <div id="alert-container" class="container" style="display: none;">
+                <img src="images/icons/alert_icon.svg" alt="">
+                <div id="alert-message" class="message">Alert</div>
+            </div>
+        </div>
+
+        <div style="display: none;" class="confirm" id="confirm">
+            <div class="confirm-container" id="confirm-container">
+                <div id="confirm-title" class="confirm-title">Möchtest du die Änderungen wirklich speichern?</div>
+                <div id="confirm-confirm" class="confirm-confirm" onclick="confirmYes()">Speichern</div>
+                <div id="confirm-decline" class="confirm-decline" onclick="confirmNo()">Abbrechen</div>
+            </div>
+        </div>
+
+            
+        <!-- <div class="blurlayer"></div> -->
+
+        <div style="height: 0; pointer-events: none; display: none;">
+            <div id="transition-main" class="main" style="pointer-events: none;"></div>
+        </div>
+
+        <div id="main" class="main">
+
+            <!-- <br><br>
+
+            <h2 class="no-margin">Timothy</h2>
+            <h3 class="no-margin">Klimke</h3>
+
+            <h3>Gesellschaftlich</h3>
+
+            <div class="button-icon">
+                <img class="button-image" src="images/icons/characteristics_selected.svg" alt="">
+                <div class="button-textcontent">
+                    <div class="button-title">Steckbriefe</div>
+                    <div class="button-subtitle"></div>
+                </div>
+                <div class="button-sidenote">
+                    <div class="button-sidenote-textcontent"></div>
+                </div>
+            </div>
+
+            <h3>Beiträge</h3>
+
+            <div class="button-icon-container">
+                <div class="button-icon" onmouseup="navigate('quotes')">
+                    <img class="button-image" src="images/icons/quotes_selected.svg" alt="">
+                    <div class="button-textcontent">
+                        <div class="button-title">Zitate</div>
+                    </div>
+                </div>
+    
+                <div class="button-icon">
+                    <img class="button-image" src="images/icons/confessions_selected.svg" alt="">
+                    <div class="button-textcontent">
+                        <div class="button-title">Beichten</div>
+                    </div>
+                </div>
+    
+                <div class="button-icon">
+                    <img class="button-image" src="images/icons/storys_selected.svg" alt="">
+                    <div class="button-textcontent">
+                        <div class="button-title">Storys</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Interaktiv</h3>
+
+            <div class="button-icon-container">
+                <div class="button-icon">
+                    <img class="button-image" src="images/icons/surveys_selected.svg" alt="">
+                    <div class="button-textcontent">
+                        <div class="button-title">Umfragen</div>
+                    </div>
+                </div>
+    
+                <div class="button-icon">
+                    <img class="button-image" src="images/icons/polls_seleted.svg" alt="">
+                    <div class="button-textcontent">
+                        <div class="button-title">Abstimmungen</div>
+                    </div>
+                </div>
+    
+                <div class="button-icon">
+                    <img class="button-image" src="images/icons/rankings_selected.svg" alt="">
+                    <div class="button-textcontent">
+                        <div class="button-title">Rankings</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Weiteres</h3>
+
+
+
+
+            <div class="zitat" onmouseup="alert('test')">
+                <img src="images/icons/star_selected.svg">
+                Sascha Lobo Daddy
+                <div class="subtitle">Frau Gadeberg out of Kontext</div>
+            </div>
+
+            <br><br><br>
+
+            <div class="zitat" onmouseup="alert('test')">
+                <img src="images/icons/star_selected.svg">
+                Felix zeig mal dein WhatsApp Chat mit Luis
+                <div class="subtitle">Frau Gadeberg zu Felix. Luis muss nachschreiben seit 2 Wochen kommt aber nicht (Kunst)</div>
+            </div>
+
+            <h3>Zitat</h3>
+            <textarea id="textArea" autocomplete="0ff" autocorrect="off" spellcheck="off" autocapitalize="off" class="auto-resize" name="" id="" style="pointer-events: all;" placeholder="Gib hier dein Zitat ein..."></textarea>
+
+            <h3>Kontext</h3>
+            <textarea autocomplete="0ff" autocorrect="off" spellcheck="off" autocapitalize="off" class="auto-resize" name="" id="" style="pointer-events: all;" placeholder="Beschreibe hier den Kontext des Zitats..."></textarea> -->
+
+        </div>
+
+
+
+    </div>
+
+    <script src="javascript/app.js"></script>
+    <script>getLoginCode()</script>
+
+</body>
+
+
+</html>
