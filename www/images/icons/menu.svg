@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        opacity: .66;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="0" y="0" width="256" height="256"/>
+  <g id="Menu" class="cls-3">
+    <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-2" cx="61.27" cy="77.5" r="12.62"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-2" cx="61.27" cy="128" r="12.62"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-2" cx="61.27" cy="178.5" r="12.62"/>
+    <path class="cls-2" d="M207.36,85.5h-108.21c-4.42,0-8-3.58-8-8s3.58-8,8-8h108.21c4.42,0,8,3.58,8,8s-3.58,8-8,8Z"/>
+    <path class="cls-2" d="M207.36,136h-108.21c-4.42,0-8-3.58-8-8s3.58-8,8-8h108.21c4.42,0,8,3.58,8,8s-3.58,8-8,8Z"/>
+    <path class="cls-2" d="M207.36,186.5h-108.21c-4.42,0-8-3.58-8-8s3.58-8,8-8h108.21c4.42,0,8,3.58,8,8s-3.58,8-8,8Z"/>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1140 1965.98">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Unbenannter_Verlauf_103);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#Unbenannter_Verlauf_50);
+      }
+    </style>
+    <linearGradient id="Unbenannter_Verlauf_103" data-name="Unbenannter Verlauf 103" x1="-379.81" y1="13015.69" x2="98.08" y2="13015.69" gradientTransform="translate(710.86 -12790.96)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5c5b4c" stop-opacity="0"/>
+      <stop offset="1" stop-color="#494f49"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_50" data-name="Unbenannter Verlauf 50" x1="-389.89" y1="13015.69" x2="88.01" y2="13015.69" gradientTransform="translate(720.94 -12780.89)" gradientUnits="userSpaceOnUse">
+      <stop offset=".01" stop-color="#363636" stop-opacity="0"/>
+      <stop offset="1" stop-color="#232323"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" x="331.05" y="-345.85" width="477.9" height="1141.15" transform="translate(345.27 794.73) rotate(-90)"/>
+  <image width="1170" height="2532" transform="translate(-8.78 -521.28)" xlink:href="../../../../../../../../../Users/timothyklimke/Downloads/IMG_1944.PNG"/>
+  <rect class="cls-2" x="331.05" y="-351.58" width="477.9" height="1172.76" transform="translate(335.2 804.8) rotate(-90)"/>
+</svg>
