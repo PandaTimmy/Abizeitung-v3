@@ -34,6 +34,8 @@ Die Datenbank ist in dem Verzeichnis als `abibuzz.sql` zu finden.
 
 Diese Version ist noch nicht fertig und wird nicht mehr von mir fertig gestellt werden. Aufgrund von Datenschutz ist diese App noch eingeschränkter, da die Funktionierenden Tabellen gelöscht werden mussten aufgrund von noch eingetragener Daten verschiedener Schüler.
 
+**Die Ramsey UUID Bibliothek muss erneut im `ramsey` Verzeichnis installiert werden!!!**
+
 ## Admin Anmeldedaten
 
 Benutzername: `Admin-TK` <br>
